@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hi this is html code</p>
+    <h1>Counter</h1>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <p id="counter">0</p>
+    <script>
+        let count = 0;
+
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('increment');
+        const decrementButton = document.getElementById('decrement');
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+
+        decrementButton.addEventListener('click', () => {
+            count--;
+            counterElement.textContent = count;
+        });
 </body>
 </html>
